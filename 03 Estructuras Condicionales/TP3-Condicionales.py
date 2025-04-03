@@ -20,7 +20,7 @@ if edad > 18:
 
 # Se solicita al usuario que ingrese su nota
 nota = int(input("Ingrese su nota: "))
-# Si se cumple la condicion anterior se muestra el mensaje "Aprobado".
+# Si se cumple la condicion se muestra el mensaje "Aprobado".
 if nota >= 6:
     print("Aprobado")
 # Si no se cumple se muestra el mensaje "Desaprobado".
@@ -78,10 +78,10 @@ else:
 # como una lista o un string.
 
 # Se solicita al usuario ingresar una contraseña
-contrasena = input("Ingrese una contraseña que contenga entre 8 y 14 caracteres: ")     # La variable contrasena guarda el input solicitado al usuario
+contrasena = input("Ingrese una contraseña que contenga entre 8 y 14 caracteres: ")
 largo_contrasena = len(contrasena)         
 # Si se cumple la condicion se muestra el mensaje "Ha ingresado una contraseña correcta"
-if largo_contrasena >= 8 and largo_contrasena <= 14:              # El condicional verifica si la variable largo_contrasena es mayor o igual que 8 y menor o igual que 14
+if largo_contrasena >= 8 and largo_contrasena <= 14:
     print("Ha ingresado una contraseña correcta")  
 # Si no se cumple se muestra el mensaje "Por favor, ingrese una contraseña de entre 8 y 14 caracteres"
 else:
