@@ -1,21 +1,33 @@
+# TRABAJO PRACTICO 3: ESTRUCTURAS CONDICIONALES
+# MOLINARI, PABLO
+
 
 # 1) Escribir un programa que solicite la edad del usuario. Si el usuario es mayor de 18 años, 
 # deberá mostrar un mensaje en pantalla que diga “Es mayor de edad”. 
 
-edad = int(input("Ingrese su edad: ")) # Con el input se pide la edad al usuario, se convierte en numero entero con int, y se guarda en la variable edad
-if edad > 18:                           # El condicional verifica si la variable edad es mayor al numero 18
-    print("Es mayor de edad")           # Si se cumple la condicion anterior se ejecuta el print, mostrando el mensaje.
+# Se solicita al usuario ingresar la edad
+edad = int(input("Ingrese su edad: "))
+# Si se cumple la condicion anterior se muestra el mensaje "Es mayor de edad".
+if edad > 18:
+    print("Es mayor de edad")
+
+# Se podria agregar un condicional para evitar que se ingresen números negativo.
 
 
 # 2) Escribir un programa que solicite su nota al usuario. Si la nota es mayor o igual a 6, deberá 
 # mostrar por pantalla un mensaje que diga “Aprobado”; en caso contrario deberá mostrar el 
 # mensaje “Desaprobado”.
 
-nota = int(input("Ingrese su nota: "))  # En la variable nota se guarda el input solicitado al usuario, convertido en entero por el int 
-if nota >= 6:                           # El condicional verifica si la variable edad es mayor o igual al numero 6
-    print("Aprobado")                   # Si se cumple la condicion anterior se ejecuta el print, mostrando el mensaje "Aprobado".
+# Se solicita al usuario que ingrese su nota
+nota = int(input("Ingrese su nota: "))
+# Si se cumple la condicion anterior se muestra el mensaje "Aprobado".
+if nota >= 6:
+    print("Aprobado")
+# Si no se cumple se muestra el mensaje "Desaprobado".
 else:
-    print("Desaprobado")                # Si no se cumple se ejecuta el print, mostrando el mensaje "Desaprobado".
+    print("Desaprobado")
+
+# Se podria agregar un condicional para evitar que se ingresen notas negativas o mayores a 10.
 
 
 # 3) Escribir un programa que permita ingresar solo números pares. Si el usuario ingresa un 
@@ -23,12 +35,14 @@ else:
 # contrario, imprimir por pantalla "Por favor, ingrese un número par". Nota: investigar el uso del 
 # operador de módulo (%) en Python para evaluar si un número es par o impar. 
 
-num = int(input("Ingrese un número par: "))     # En la variable num se guarda el input solicitado al usuario, convertido en entero por el int 
-if num % 2 == 0:                                # El operador módulo (%) se usa para obtener el resto de la división entre la variable num y 2.
-                                                # El condicional verifica si la variable es igual a cero, ya que el resto de los pares siempre es cero
-    print("Ha ingresado un número par")         # Si se cumple la condicion se ejecuta el print, mostrando el mensaje "Ha ingresado un número par"
+# Se solicita al usuario que ingrese un número
+num = int(input("Ingrese un número: "))
+# Si se cumple la condicion se muestra el mensaje "Ha ingresado un número par"
+if num % 2 == 0:
+    print("Ha ingresado un número par")
+# Si no se cumple se muestra el mensaje "Por favor, ingrese un número par".
 else:
-    print("Por favor, ingrese un número par")   # Si no se cumple se ejecuta el print, mostrando el mensaje "Por favor, ingrese un número par".
+    print("Por favor, ingrese un número par")   
 
 
 # 4) Escribir un programa que solicite al usuario su edad e imprima por pantalla a cuál de las 
@@ -38,16 +52,22 @@ else:
 # ● Adulto/a joven: mayor o igual que 18 años y menor que 30 años. 
 # ● Adulto/a: mayor o igual que 30 años. 
 
-edad = int(input("Ingrese su edad: "))                  # En la variable edad se guarda el input solicitado al usuario, convertido en entero por el int
-if edad < 12:                                            # El condicional verifica si la variable edad es menor al numero 12
+# Se solicita ingresar su edad
+edad = int(input("Ingrese su edad: "))
+# Si la variable edad es menor al numero 12, se muestra "Usted pertence a la categoría Niño/a"
+if edad < 12:
     print("Usted pertence a la categoría Niño/a")
-elif edad >= 12 and edad < 18:                           # El condicional elfi, si no se cumplio el condicional anterior, verifica si la variable edad 
-                                                        # es mayor o igual al numero 12 y edad es menor al numero 18.
-    print("Usted pertence a la categoría Adolecente")   # Si se cumple la condicion se ejecuta el print
-elif edad >= 18 and edad < 30:                          # Si no se cumple se verifica que la variable edad es mayor o igual a 18 y menor que 30
-    print("Usted pertence a la categoría Adulto/a joven")   # Si se cumple la condicion se ejecuta el print
+# Si edad es mayor o igual que 12 y menor que 18, se muestra "Usted pertence a la categoría Adolecente"
+elif edad >= 12 and edad < 18:
+    print("Usted pertence a la categoría Adolecente")
+# Si edad es mayor o igual que 18 y menor que 30, se muestra "Usted pertence a la categoría Adulto/a joven"
+elif edad >= 18 and edad < 30:
+    print("Usted pertence a la categoría Adulto/a joven")
+# Si no se cumplen las condiciones anteriores se muestra el mensaje "Usted pertence a la categoría Adulto/a"
 else:
-    print("Usted pertence a la categoría Adulto/a")     # Si no se cumple se ejecuta el print
+    print("Usted pertence a la categoría Adulto/a")
+
+# Se podria agregar un condicional para evitar que se ingresen números negativo.
 
 
 # 5) Escribir un programa que permita introducir contraseñas de entre 8 y 14 caracteres 
@@ -57,12 +77,15 @@ else:
 # de la función len() en Python para evaluar la cantidad de elementos que tiene un iterable tal 
 # como una lista o un string.
 
+# Se solicita al usuario ingresar una contraseña
 contrasena = input("Ingrese una contraseña que contenga entre 8 y 14 caracteres: ")     # La variable contrasena guarda el input solicitado al usuario
-largo_contrasena = len(contrasena)                                # La funcion len() devuelve la cantidad de caracteres de la variable contrasenta y se guarda en la variable largo_contrasena
+largo_contrasena = len(contrasena)         
+# Si se cumple la condicion se muestra el mensaje "Ha ingresado una contraseña correcta"
 if largo_contrasena >= 8 and largo_contrasena <= 14:              # El condicional verifica si la variable largo_contrasena es mayor o igual que 8 y menor o igual que 14
-    print("Ha ingresado una contraseña correcta")                 # Si se cumple la condicion se ejecuta el print
+    print("Ha ingresado una contraseña correcta")  
+# Si no se cumple se muestra el mensaje "Por favor, ingrese una contraseña de entre 8 y 14 caracteres"
 else:
-    print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres")   # Si no se cumple se ejecuta el print
+    print("Por favor, ingrese una contraseña de entre 8 y 14 caracteres")
 
 
 # 6) El paquete statistics de python contiene funciones que permiten tomar una lista de números 
@@ -89,35 +112,47 @@ else:
 # Nota: el bloque de código anterior crea una lista con 50 números entre 1 y 100 elegidos de 
 # forma aleatoria. 
 
-from statistics import mode, median, mean          # del paquete statistics se importan solo las funciones mode, median, mean
-# median: Retorna la mediana (valor central) de los datos numéricos, utilizando el método clásico de «media de los dos del medio»
-# mean: Retorna la media aritmética, es decir, la suma de los valores dividida entre el número de observaciones. Es comúnmente denominada «promedio»
-# mode: Retorna el valor más común del conjunto de datos discretos o nominales data.La moda (cuando existe) es el valor más representativo y sirve como medida de tendencia central.
+# Del paquete statistics se importan solo las funciones mode, median, mean
+from statistics import mode, median, mean          
 import random
 
-numeros_aleatorios = [random.randint(1, 100) for i in range(50)] #crea una lista con 50 números entre 1 y 100 elegidos de forma aleatoria.
-moda = mode(numeros_aleatorios)         # La variable moda guarda el valor de la funcion mode, la que retorna el valor de la variable numeros_aleatorios.
-mediana = median(numeros_aleatorios)    # La variable mediana guarda el valor de la funcion median, la que retorna los datos de la variable numeros_aleatorios.
-media = mean(numeros_aleatorios)         # La variable media guarda el valor de la funcion mean, la que retorna el promedio de la variable numeros_aleatorios.
+# crea una lista con 50 números entre 1 y 100 elegidos de forma aleatoria.
+numeros_aleatorios = [random.randint(1, 100) for i in range(50)] 
 
-if media == mediana and media == moda:   # El condicional verifica si la variable media, mediana y moda son iguales
-    print("No hay sesgo")               # Si se cumple esa condicion se ejecuta el print
-elif media > mediana and mediana > moda:    # Si no se cumple se verifica si media es mayor a mediana y si mediana es mayor a moda
-    print("Hay sesgo positivo")             # Si se cumple esa condicion se ejecuta el print
-elif media < mediana and mediana < moda:    # Si no se cumple se verifica si media es menor a mediana y si mediana es menor a moda
-    print("Hay sesgo negativo")             # Si se cumple esa condicion se ejecuta el print
+# Se utilizan las funciones y se guardan en las variables
+moda = mode(numeros_aleatorios)
+mediana = median(numeros_aleatorios)
+media = mean(numeros_aleatorios)
+
+# Si se cumple la condicion se muestra el mensaje "No hay sesgo"
+if media == mediana and media == moda:
+    print("No hay sesgo")
+# Si se cumple la siguiente condicion se muestra el mensaje "Hay sesgo positivo"              
+elif media > mediana and mediana > moda:
+    print("Hay sesgo positivo")
+# Si se cumple la siguiente condicion se muestra el mensaje "Hay sesgo negativo"
+elif media < mediana and mediana < moda:
+    print("Hay sesgo negativo")
+
+# Se podría agregar un else que ejecute un print para el caso que no se cumplan las condiciones anteriores.
+
 
 # 7) Escribir un programa que solicite una frase o palabra al usuario. Si el string ingresado 
 # termina con vocal, añadir un signo de exclamación al final e imprimir el string resultante por 
 # pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por 
 # pantalla. 
 
-frase = input("Ingrese una frase o palabra: ")      # La variable frase guarda el input solicitado al usuario
-letraFinal = frase[-1].lower()                      # frase[-1] es el ultimo caracter de la variable frase, lower pasa el caracter a minuscula y se guarda en la variable letraFinal
-if letraFinal == 'a' or letraFinal == 'e' or letraFinal == 'i' or letraFinal == 'o' or letraFinal == 'u':       # El condicional verifica que la variable letraFinal sea una vocal
-    print(frase + "!")                               # Si se cumple la condicion se ejecuta el print, agregando el signo de exclamación
+# Se solicita al usuario que ingrese una frase o una palabra
+frase = input("Ingrese una frase o palabra: ")
+letraFinal = frase[-1].lower()
+# Si se cumple la condicion se muestra la frase agregando el signo de exclamación al final 
+if letraFinal == 'a' or letraFinal == 'e' or letraFinal == 'i' or letraFinal == 'o' or letraFinal == 'u':
+    print(frase + "!")
+# Si no se cumple se muestra la frase original ingresada por el usuario
 else:
-    print(frase)                                    # Si no se cumple se ejecuta el print
+    print(frase)
+
+# Se podria mejor el codigo inculendo las vocales con tildes o caracteres especiales.
 
 
 # 8) Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3 
@@ -129,27 +164,25 @@ else:
 # usuario e imprimir el resultado por pantalla. Nota: investigue uso de las funciones upper(), 
 # lower() y title() de Python para convertir entre mayúsculas y minúsculas.
 
-# La variable nombre guarda el input solicitado al usuario
+# Se solicita al usuario ingresar su nombre
 nombre = input("Ingrese su nombre: ")
-# La variable opcion guarda el input solicitado, y el int lo transforma en un numero entero
+
+# Se solicita al usuario ingresar una de las opciones
 opcion = int(input("""Si quiere su nombre en mayúsculas, ingrese 1.
 Si quiere su nombre en minúsculas, ingres 2.
 Si quiere su nombre con la primera letra mayúscula, ingrese 3."""))
-# El condicional verifica si la variable opcion es igual a 1
+
+# Si se cumple la condicion se muestra el texto en mayusculas
 if opcion == 1:
-# Si se cumple la condicion se ejecuta el print.
-# .upper() Convierte todos los caracteres a mayúsculas.
     print(nombre.upper())
-# Si no se cumple se verifica la variable opcion es igual a 2
+# Si se cumple la condicion 2, se muestra el texto en minúsculas
 elif opcion == 2:
-# Si se cumple la condicion se ejecuta el print.
-# .lower() Convierte toda la frase a minúsculas
     print(nombre.lower())
-# Si no se cumple se verifica la variable opcion es igual a 3
+# Si se cumple la condicion 3, se muestra la inicial en mayúscula
 elif opcion == 3:
-# Si se cumple la condicion se ejecuta el print.
-# .title() Convierte la primera letra de cada palabra en mayúscula
     print(nombre.title())
+
+# Se podría agregar un condicional para evitar que se ingresen números negativos o mayores a 3.
 
 
 # 9) Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la 
@@ -164,31 +197,23 @@ elif opcion == 3:
 # ● Mayor o igual que 6  y menor que 7: "Muy Fuerte" (puede causar daños significativos). 
 # ● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
 
-# La variable magnitud guarda el input, float convierte el valor en un numero decimal
+# Se solicita al usuario ingresar la magnitud del terremoto
 magnitud = float(input("Ingrese la magnitud del terremoto: "))
-# El condicional verifica si la variable magnitud es menor a 3
+# Si se muestra el mensaje segun la condición que se cumpla
 if magnitud < 3:
-# Si se cumple la condicion se ejecuta el print.
     print("La magnitud del terremoto es Muy Leve, imperceptible")
-# Si no se cumple se verifica la variable sea mayor o igual que 3 y menor que 4
 elif magnitud >= 3 and magnitud < 4:
-# Si se cumple la condicion se ejecuta el print.
     print("La magnitud del terremoto es Leve, ligeramente perceptible")
-# Si no se cumple se verifica la variable sea mayor o igual que 4 y menor que 5
 elif magnitud >= 4 and magnitud < 5:
-# Si se cumple la condicion se ejecuta el print.
     print("La magnitud del terremoto es Moderado, sentido por personas, pero generalmente no causa daños")
-# Si no se cumple se verifica la variable sea mayor o igual que 5 y menor que 6
 elif magnitud >= 5 and magnitud < 6:
-# Si se cumple la condicion se ejecuta el print.
     print("La magnitud del terremoto es Fuerte, puede causar daños en estructuras débiles")
-# Si no se cumple se verifica la variable sea mayor o igual que 6 y menor que 7
 elif magnitud >= 6 and magnitud < 7:
-# Si se cumple la condicion se ejecuta el print.
     print("La magnitud del terremoto es Muy Fuerte, puede causar daños significativos")
-# Si no se cumple, se ejecuta el print
 else:
     print("La magnitud del terremoto es Extremo, puede causar graves daños a gran escala")
+
+# Se podria agregar un condicional para evitar los valores negativos.
 
 
 # 10) Utilizando la información aportada en la siguiente tabla sobre las estaciones del año 
