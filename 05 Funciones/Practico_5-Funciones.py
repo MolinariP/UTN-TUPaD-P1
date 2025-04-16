@@ -21,7 +21,8 @@ def saludar_usuario(nombre):
     print(f"Hola {nombre}!")
 
 # Programa principal
-saludar_usuario("Marcos")
+nombre = input("Ingrese su nombre: ")
+saludar_usuario(nombre)
 
 
 #  3. Crear una función llamada informacion_personal(nombre, apellido,
